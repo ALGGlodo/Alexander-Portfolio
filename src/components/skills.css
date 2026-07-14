@@ -1,0 +1,207 @@
+.skills {
+  position: relative;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(78, 155, 107, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(217, 139, 62, 0.08), transparent 40%),
+    var(--black);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.skills-bg-shape {
+  position: absolute;
+  border: 1px solid rgba(78, 155, 107, 0.25);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.skills-bg-shape-1 {
+  width: 90px;
+  height: 90px;
+  top: 8%;
+  right: 10%;
+  animation: float1 9s ease-in-out infinite;
+}
+
+.skills-bg-shape-2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: rgba(217, 139, 62, 0.25);
+  bottom: 10%;
+  left: 8%;
+  animation: float2 7s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: rotate(20deg) translateY(0); }
+  50% { transform: rotate(-10deg) translateY(-16px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(14px) scale(1.1); }
+}
+
+.skills-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-family-mono);
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.skills-grid {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-group-label {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.9rem;
+}
+
+.skills-group-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: var(--white);
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.skill-card-fallback {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+
+.skill-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover {
+  border-color: var(--green);
+  background: rgba(78, 155, 107, 0.06);
+}
+
+.radar-section {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.radar-caption {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.radar-grid-outer {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+}
+
+.radar-data {
+  fill: var(--green);
+  fill-opacity: 0;
+  stroke: var(--green);
+  stroke-width: 2;
+  transform-origin: 150px 140px;
+  transform: scale(0);
+  transition: transform 0.9s ease, fill-opacity 0.9s ease;
+}
+
+.radar-chart.is-visible .radar-data {
+  transform: scale(1);
+  fill-opacity: 0.25;
+}
+
+.radar-label {
+  font-family: var(--font-family-mono);
+  font-size: 10px;
+  fill: var(--gray);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .skills-bg-shape, .radar-data, .skill-card {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .radar-data { fill-opacity: 0.25; }
+}

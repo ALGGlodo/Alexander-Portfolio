@@ -4,7 +4,7 @@ import { Medal } from "lucide-react";
 
 function About() {
     return(
-        <section className="about">
+        <section className="about" id="about">
             <div className="about-info">
                 <h2 className="about-me-title">Get to know me.</h2>
                 <p className="narrative">
@@ -13,7 +13,7 @@ function About() {
                 <div className="glassy-box">
                     <div className="box">
                         <p className="project">Project</p>
-                        <span>6</span>
+                        <span>13</span>
                     </div>
                     <div className="box">
                         <p className="project">School</p>

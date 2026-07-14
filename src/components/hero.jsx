@@ -5,7 +5,7 @@ const PROFILE_URL = "https://github.com/ALGGlodo";
 
 export default function Hero() {
     return(
-        <section className="hero">
+        <section className="hero" id="home">
             <div className="hero-top">
                 <span className="hero-tag">Front-End Developer</span>
                 <span className="hero-tag">Aspiring UI/UX Designer</span>

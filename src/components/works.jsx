@@ -10,6 +10,9 @@ import DeliverAir from "../assets/DeliverAir.png";
 import shiksResto from "../assets/shiks_restobar.png";
 import ServeXCourier from "../assets/ServeX Courier Side.png";
 import ServeXCustomer from "../assets/ServeX Customer Side.png";
+import DevTech from "../assets/DevTech.png";
+import AUII from "../assets/AUII_Figma.png";
+import TeaCafe from "../assets/I-Tea Cafe.png";
 import { ChevronRight } from "lucide-react";
 
 
@@ -97,6 +100,37 @@ function Works() {
             aiTools: ["VEED AI", "ChatGPT"],
             status: "Shipped",
           },
+           {
+            title: "DevTech",
+            image: DevTech,
+            url: null,
+            figmaUrl: "https://www.figma.com/proto/xhiYu1kZdqLG30OAI9G6r7/Devtech?node-id=37-10&starting-point-node-id=37%3A10&t=ZEVag0mQB3mAaJmk-1",
+            description: "A project built for a major subject in our course, starting from a pre-built template and modified to meet the assignment requirements, adjusted layout, content, and styling to fit the project brief.",
+            languages: ["None (Figma Prototype)"],
+            aiTools: [],
+            status: "Shipped",
+          },
+           {
+            title: "Asia United Insurance Inc. (AUII) Front-End Interface Prototype",
+            image: AUII,
+            url: null,
+            figmaUrl: "https://www.figma.com/proto/m42bqbAf7oXzmX0H5wF6jZ/AUII?node-id=38-159&t=B3HOVEL77BspnPWA-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=38%3A159",
+            description: "Built during my internship at Asia United Insurance — a front-end interface for our company's main website.",
+            languages: ["None (Figma Prototype)"],
+            aiTools: [],
+            status: "Shipped",
+          },
+           {
+            title: "I-Tea Cafe",
+            image: TeaCafe,
+            url: null,
+            figmaUrl: "https://www.figma.com/design/9aYXBRQ2QWirJ3SSvIb3Yb/I-TEA-CAFE?node-id=0-1&t=MHUbnDRtX5WMzNdr-1",
+            description: "A modern cafe interface design created in Figma, showcasing a clean and user-friendly layout for a fictional cafe business.",
+            languages: ["None (Figma Prototype)"],
+            aiTools: [],
+            status: "Shipped",
+          },
+
     ];
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -115,7 +149,7 @@ function Works() {
     }, [emblaApi]);
 
    return (
-        <section className="works">
+        <section className="works" id="works">
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">
                     {projects.map((project, index) => (
@@ -167,6 +201,12 @@ function Works() {
                                     {project.url && (
                                         <a href={project.url} target="_blank" rel="noopener noreferrer" className="slide-link">
                                             View project <ChevronRight size={16} />
+                                        </a>
+                                    )}
+
+                                    {project.figmaUrl && (
+                                        <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer" className="slide-link slide-link-figma">
+                                            View design <ChevronRight size={16} />
                                         </a>
                                     )}
 
