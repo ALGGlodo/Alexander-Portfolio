@@ -7,7 +7,7 @@ import { BsOpenai, BsClaude } from "react-icons/bs";
 import { RiGeminiFill } from "react-icons/ri";
 import { FcSupport } from "react-icons/fc";
 import { Database, Bug } from "lucide-react";
-import "./Skills.css";
+import "./skills.css";
 
 const skillGroups = [
   {
