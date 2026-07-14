@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Archivo', sans-serif;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --gray: #8b8f94 ;
+  --green: #4e9b6b;
+  --amber: #d98b3e;
+}
+
+.about{
+    background: var(--white);
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-info{
+    max-width: 65ch;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.narrative{
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.about-me-title{
+    font-family: var(--font-display);
+    font-size: 2.5rem; 
+    font-weight: 700;
+    margin-bottom: 0.50rem;
+    color: var(--black);
+}
+
+.glassy-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1.75rem 1rem;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise 0.6s ease forwards;
+}
+
+.box:nth-child(1) { animation-delay: 0.05s; }
+.box:nth-child(2) { animation-delay: 0.2s; }
+.box:nth-child(3) { animation-delay: 0.35s; }
+
+.box:hover {
+  transform: translateY(-6px);
+  border-color: var(--green);
+  box-shadow: 0 12px 30px rgba(78, 155, 107, 0.18);
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.box span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

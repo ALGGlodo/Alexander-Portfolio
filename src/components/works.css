@@ -1,0 +1,240 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Archivo', sans-serif;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --gray: #8b8f94 ;
+  --green: #4e9b6b;
+  --amber: #d98b3e;
+}
+
+
+.works{
+    padding: 5rem 2rem;
+    background: var(--black);
+    overflow: hidden;
+}
+
+.embla{
+    cursor: grab;
+}
+
+.embla:active {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide{
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 0 1rem;
+}
+
+.slide-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slide-image{
+    height: 260px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(78, 155, 107, 0.15), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    filter: grayscale(40%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.slide-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+.slide-link:hover{
+    background: var(--white);
+    color: var(--black);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.embla__slide.is-active .slide-image{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.slide-text{
+    opacity: 0.4;
+    transform: translateY(6px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.embla__slide.is-active .slide-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-meta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family-mono);
+    font-size: 0.80rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.status-dot{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.slide-title{
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
+.slide-description{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.tag-label{
+    font-family: var(--font-family-mono);
+    font-size: 0.80rem;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.tag-row{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.tag{
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.embla__slide.is-active .tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tag-ai {
+  background: rgba(78, 155, 107, 0.15);
+  color: var(--green);
+}
+
+.embla-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.embla-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    cursor: pointer;
+    color: var(--white);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.embla-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--green);
+  transform: scale(1.05);
+}
+
+.embla-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.embla-dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.embla-dot.is-selected {
+  background: var(--green);
+  transform: scale(1.4);
+}
+
+@media (max-width: 700px) {
+  .slide-content {
+    grid-template-columns: 1fr;
+  }
+  .slide-image {
+    height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-image,
+  .slide-text,
+  .tag,
+  .embla-btn,
+  .embla-dot {
+    transition: none !important;
+  }
+}
