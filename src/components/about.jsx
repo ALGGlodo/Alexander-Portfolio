@@ -13,7 +13,7 @@ function About() {
                 <div className="glassy-box">
                     <div className="box">
                         <p className="project">Project</p>
-                        <span>13</span>
+                        <span>12</span>
                     </div>
                     <div className="box">
                         <p className="project">School</p>
