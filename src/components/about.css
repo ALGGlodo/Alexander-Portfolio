@@ -113,3 +113,8 @@
     transform: none;
   }
 }
+@media (max-width: 600px) {
+  .glassy-box {
+    grid-template-columns: 1fr;
+  }
+}
