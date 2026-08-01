@@ -13,6 +13,7 @@ import ServeXCustomer from "../assets/ServeX Customer Side.png";
 import DevTech from "../assets/DevTech.png";
 import AUII from "../assets/AUII_Figma.png";
 import TeaCafe from "../assets/I-Tea Cafe.png";
+import BloomPomodoro from "../assets/Bloom.png";
 import { ChevronRight } from "lucide-react";
 
 
@@ -20,6 +21,24 @@ function Works() {
 
     const projects = [
            {
+            title: "ServeX - Customer Side",
+            image: ServeXCustomer,
+            url: "https://algglodo.github.io/ServeX-Customer/",
+            description: "A customer-facing web application prototype created as part of the ServeX capstone project. It demonstrates the interface and core workflows designed for end users, including placing orders and tracking delivery status.",
+            languages: ["Javascript (VanillaJS)", "Firebase", "CSS", "HTML"],
+            aiTools: ["Claude API"],
+            status: "Shipped",
+        },
+        {
+            title: "Pomodoro with Seventeen Playlist",
+            image: BloomPomodoro,
+            url: " https://pomodoro-with-playlist-for-ms-bangs.lovable.app/",
+            description: "A Pomodoro timer integrated with a playlist of seventeen songs. This project combines productivity with music to create a more engaging study environment.",
+            languages: ["TypeScript", "CSS", "HTML"],
+            aiTools: ["Lovable AI"],
+            status: "Shipped",
+        },
+        {
             title: "ServeX - Customer Side",
             image: ServeXCustomer,
             url: "https://algglodo.github.io/ServeX-Customer/",
