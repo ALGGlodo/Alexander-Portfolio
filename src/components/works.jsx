@@ -14,12 +14,22 @@ import DevTech from "../assets/DevTech.png";
 import AUII from "../assets/AUII_Figma.png";
 import TeaCafe from "../assets/I-Tea Cafe.png";
 import BloomPomodoro from "../assets/Bloom.png";
+import playfulPets from "../assets/PlayfulPets.png";
 import { ChevronRight } from "lucide-react";
 
 
 function Works() {
 
     const projects = [
+           {
+            title: "Playful Pets",
+            image: playfulPets,
+            url: "https://algglodo.github.io/Happy_Pets/",
+            description: "A pet adoption website prototype created as part of a enhancing skillset. It showcases the interface and core workflows designed for users to browse and look for the veterinay services and it was built using VanillaJS, CSS, and HTML.",
+            languages: ["Javascript (VanillaJS)", "CSS", "HTML"],
+            aiTools: ["Claude API"],
+            status: "Shipped",
+        },
            {
             title: "ServeX - Customer Side",
             image: ServeXCustomer,
