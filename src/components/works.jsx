@@ -15,28 +15,39 @@ import AUII from "../assets/AUII_Figma.png";
 import TeaCafe from "../assets/I-Tea Cafe.png";
 import BloomPomodoro from "../assets/Bloom.png";
 import playfulPets from "../assets/PlayfulPets.png";
+import Sour from "../assets/Sour-Up.png";
 import { ChevronRight } from "lucide-react";
 
 
 function Works() {
 
     const projects = [
-           {
+
+        {
+            title: "Sour Up",
+            image: Sour,
+            url: "https://algglodo.github.io/Sour-Up/",
+            description: "SOUR UP 🍬 A playful, high-energy landing page for SOUR UP — a candy brand serving bold, sour-fruit gummies for kids and teens who chase big flavor. Built from a custom Figma design and hand-coded to learn React fundamentals from the ground up.",
+            languages: ["React", "HTML"],
+            Tools: ["Claude"],
+            status: "Shipped",
+        },
+        {
             title: "Playful Pets",
             image: playfulPets,
             url: "https://algglodo.github.io/Happy_Pets/",
             description: "A pet adoption website prototype created as part of a enhancing skillset. It showcases the interface and core workflows designed for users to browse and look for the veterinay services and it was built using VanillaJS, CSS, and HTML.",
             languages: ["Javascript (VanillaJS)", "CSS", "HTML"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude API"],
             status: "Shipped",
         },
-           {
+        {
             title: "ServeX - Customer Side",
             image: ServeXCustomer,
             url: "https://algglodo.github.io/ServeX-Customer/",
             description: "A customer-facing web application prototype created as part of the ServeX capstone project. It demonstrates the interface and core workflows designed for end users, including placing orders and tracking delivery status.",
             languages: ["Javascript (VanillaJS)", "Firebase", "CSS", "HTML"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude API"],
             status: "Shipped",
         },
         {
@@ -45,7 +56,7 @@ function Works() {
             url: " https://pomodoro-with-playlist-for-ms-bangs.lovable.app/",
             description: "A Pomodoro timer integrated with a playlist of seventeen songs. This project combines productivity with music to create a more engaging study environment.",
             languages: ["TypeScript", "CSS", "HTML"],
-            aiTools: ["Lovable AI"],
+            Tools: ["Lovable AI"],
             status: "Shipped",
         },
         {
@@ -54,7 +65,7 @@ function Works() {
             url: "https://algglodo.github.io/ServeX-Customer/",
             description: "A customer-facing web application prototype created as part of the ServeX capstone project. It demonstrates the interface and core workflows designed for end users, including placing orders and tracking delivery status.",
             languages: ["Javascript (VanillaJS)", "Firebase", "CSS", "HTML"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude, ChatGPT, Freepik"],
             status: "Shipped",
         },
         {
@@ -63,7 +74,7 @@ function Works() {
             url: "https://algglodo.github.io/ServeX-Courier/",
             description: "A courier-facing web application prototype created as part of the ServeX capstone project. It demonstrates the interface and core workflows designed for delivery personnel, including managing deliveries and updating order statuses.",
             languages: ["Javascript (VanillaJS)", "Firebase", "CSS", "HTML"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude, ChatGPT, Freepik"],
             status: "Shipped",
         },
         {
@@ -72,7 +83,7 @@ function Works() {
             url: "https://algglodo.github.io/RPS-Parking-Website",
             description: "Firebase-backed tracker for live parking availability of our parking lot business. Built with React, CSS, and Firebase.",
             languages: ["Javascript (VanillaJS)", "Firebase", "CSS", "HTML"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude"],
             status: "Shipped",
         },
         {
@@ -81,7 +92,7 @@ function Works() {
             url: "https://algglodo.github.io/Laudare/",
             description: "Laudare is a website built for making a to-do list and tracking tasks. It was made using React and Vite. It's task is to help students and professionals to manage their tasks and to-do lists effectively.",
             languages: ["react", "vite"],
-            aiTools: ["Claude API"],
+            Tools: ["Claude, Dribble"],
             status: "Shipped",
         },
            {
@@ -90,7 +101,7 @@ function Works() {
             url: "https://algglodo.github.io/ARISKIN/",
             description: "Ariskin is a mockup brand website for a fictional skincare brand.	It was built as a multi-page e-commerce site (store, cart, order status) from scratch using HTML5, CSS3, and vanilla JavaScript ",
             languages: ["HTML", "CSS", "JavaScript (VanillaJS)"],
-            aiTools: ["Claude API", "ChatGPT", "Freepik"],
+            Tools: ["Claude API", "ChatGPT", "Freepik"],
             status: "Shipped",
            },
            {
@@ -99,7 +110,7 @@ function Works() {
             url: "https://algglodo.github.io/AuraCLEAN/",
             description: "AuraCLEAN is a mockup landing page for a fictional toothbrush brand. It was built as a single-page website from scratch using HTML5, CSS3, and vanilla JavaScript. ",
             languages: ["HTML", "CSS", "JavaScript (VanillaJS)"],
-            aiTools: ["ChatGPT", "Freepik"],
+            Tools: ["ChatGPT", "Freepik"],
             status: "Shipped",
            },
            {
@@ -108,7 +119,7 @@ function Works() {
             url: "https://algglodo.github.io/TravelCation/",
             description: "TravelCation is a mockup landing page for a fictional travel agency. It provides information about various hotels, cabins, and other accommodations. It was built as a single-page website from scratch using HTML5, CSS3, and vanilla JavaScript.",
             languages: ["HTML", "CSS", "JavaScript (VanillaJS)"],
-            aiTools: ["ChatGPT", "Freepik"],
+            Tools: ["ChatGPT", "Freepik"],
             status: "Shipped",
            },
           {
@@ -117,7 +128,7 @@ function Works() {
             url: "https://algglodo.github.io/restobar/",
             description: "A multi-page restaurant website built during a college course, following along with instructor-led tutorials. Covered structuring a full site across multiple pages: home, menu, about, and contact with consistent HTML and CSS layout throughout",
             languages: ["HTML", "CSS"],
-            aiTools: [],
+            Tools: [],
             status: "Shipped",
           },
           {
@@ -126,7 +137,7 @@ function Works() {
             url: "https://algglodo.github.io/DeliverAir/",
             description: "A concept website for a drone delivery service — swift, traffic-free delivery, built around modernizing how products reach people. Includes a promotional video produced with VEED AI.",
             languages: ["HTML", "CSS", "JavaScript", "BOOTSTRAP"],
-            aiTools: ["VEED AI", "ChatGPT"],
+            Tools: ["VEED AI", "ChatGPT"],
             status: "Shipped",
           },
            {
@@ -136,7 +147,7 @@ function Works() {
             figmaUrl: "https://www.figma.com/proto/xhiYu1kZdqLG30OAI9G6r7/Devtech?node-id=37-10&starting-point-node-id=37%3A10&t=ZEVag0mQB3mAaJmk-1",
             description: "A project built for a major subject in our course, starting from a pre-built template and modified to meet the assignment requirements, adjusted layout, content, and styling to fit the project brief.",
             languages: ["None (Figma Prototype)"],
-            aiTools: [],
+            Tools: [],
             status: "Shipped",
           },
            {
@@ -146,7 +157,7 @@ function Works() {
             figmaUrl: "https://www.figma.com/proto/m42bqbAf7oXzmX0H5wF6jZ/AUII?node-id=38-159&t=B3HOVEL77BspnPWA-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=38%3A159",
             description: "Built during my internship at Asia United Insurance — a front-end interface for our company's main website.",
             languages: ["None (Figma Prototype)"],
-            aiTools: [],
+            Tools: [],
             status: "Shipped",
           },
            {
@@ -156,7 +167,7 @@ function Works() {
             figmaUrl: "https://www.figma.com/design/9aYXBRQ2QWirJ3SSvIb3Yb/I-TEA-CAFE?node-id=0-1&t=MHUbnDRtX5WMzNdr-1",
             description: "A modern cafe interface design created in Figma, showcasing a clean and user-friendly layout for a fictional cafe business.",
             languages: ["None (Figma Prototype)"],
-            aiTools: [],
+            Tools: [],
             status: "Shipped",
           },
 
