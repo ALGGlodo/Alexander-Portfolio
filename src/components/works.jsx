@@ -16,6 +16,8 @@ import TeaCafe from "../assets/I-Tea Cafe.png";
 import BloomPomodoro from "../assets/Bloom.png";
 import playfulPets from "../assets/PlayfulPets.png";
 import Sour from "../assets/Sour-Up.png";
+import Brutalist from "../assets/brutalist.png"; 
+import Estate from "../assets/marci.png";
 import { ChevronRight } from "lucide-react";
 
 
@@ -23,6 +25,24 @@ function Works() {
 
     const projects = [
 
+        {
+            title: "Marci Metzger - The Ridge Reality Group",
+            image: Estate,
+            url: "https://algglodo.github.io/marci_homes/",
+            description: "A responsive, single-page redesign of a real estate agent’s homepage for The Ridge Realty Group in Pahrump, Nevada. I aimed for a simple but luxury look, pairing elegant typography with a clean layout and original content. It includes an image lightbox, a carousel, a mobile hamburger menu, and an embedded Google Map. Built with HTML, CSS, and vanilla JavaScript.",
+            languages: ["Vanilla JavaScript", "CSS"],
+            Tools: ["Claude, Dribble, Pinterest"],
+            status: "Shipped",
+        },
+        {
+            title: "The Brutalist",
+            image: Brutalist,
+            url: "https://algglodo.github.io/The-Brutalist/",
+            description: "The Brutalist: A responsive editorial website documenting Brutalist architecture in the Philippines. Built with HTML, CSS, and vanilla JavaScript, it uses a raw, monochrome design language inspired by the style itself.",
+            languages: ["Vanilla JavaScript", "CSS"],
+            Tools: ["Claude"],
+            status: "Shipped",
+        },
         {
             title: "Sour Up",
             image: Sour,
