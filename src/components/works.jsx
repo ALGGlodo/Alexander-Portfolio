@@ -225,11 +225,11 @@ function Works() {
                                         ))}
                                     </div>
 
-                                    {project.aiTools.length > 0 && (
+                                    {project.Tools.length > 0 && (
                                         <>
-                                            <p className="tag-label">ai tools</p>
+                                            <p className="tag-label">tools</p>
                                             <div className="tag-row">
-                                                {project.aiTools.map((tool, i) => (
+                                                {project.Tools.map((tool, i) => (
                                                     <span className="tag tag-ai" key={i} style={{ transitionDelay: `${i * 0.05}s` }}>
                                                         {tool}
                                                     </span>

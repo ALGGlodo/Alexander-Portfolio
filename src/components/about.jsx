@@ -1,7 +1,4 @@
 import "./about.css";
-import { Medal } from "lucide-react";
-
-
 function About() {
     return(
         <section className="about" id="about">

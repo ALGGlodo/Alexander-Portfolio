@@ -1,7 +1,7 @@
 import QRCode from "react-qr-code";
 import "./hero.css";
 
-const PROFILE_URL = "https://github.com/ALGGlodo";
+const profile_QR = "https://github.com/ALGGlodo";
 
 export default function Hero() {
     return(
@@ -30,7 +30,7 @@ export default function Hero() {
 
         <div className="hero-qr">
             <QRCode
-            value={`https://github.com/ALGGlodo`}
+            value={profile_QR}
             size={96}
             bgColor="#0d0d0d"
             fgColor="#4e9b6b"
