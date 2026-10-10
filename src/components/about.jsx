@@ -9,8 +9,8 @@ function About() {
                 </p>
                 <div className="glassy-box">
                     <div className="box">
-                        <p className="project">Project</p>
-                        <span>12</span>
+                        <p className="project">Projects</p>
+                        <span>18</span>
                     </div>
                     <div className="box">
                         <p className="project">School</p>
